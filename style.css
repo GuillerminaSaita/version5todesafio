@@ -1,3 +1,32 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+/*footer*/
+.bi-instagram{
+font-size: 30px;
+color: rgb(194, 205, 236);
+}
+
+.ig{
+    font-size: 15px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: rgb(247, 248, 237);
+}
+
+.bi-whatsapp{
+    font-size: 30px;
+    color:rgb(194, 205, 236);
+}
+
+.wsp{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(247, 248, 237);
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -104,7 +133,7 @@ li {
 }
 
 
-.main {
+.main{
     /*grid area del template*/
     grid-area: main;
     display: flex;
@@ -113,6 +142,8 @@ li {
     padding-left: 20px;
     padding-right: 20px;
     margin-right: 0;
+    min-height:500px;
+
 
 }
 /*
@@ -186,8 +217,8 @@ a {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
-    background-color: rgb(215, 221, 226);
-    border-bottom: 1px solid cornflowerblue;
+    background-color: rgb(131, 161, 216);
+    border-bottom: 1px solid rgb(131, 161, 216);
 }
 
 
@@ -212,25 +243,27 @@ a {
 .boton_after {
 
     margin-top: 1.5rem;
-    background-color: rgb(71, 78, 219);
+    background-color: rgb(131, 161, 216);
     padding: 0.4rem 1rem;
     border-radius: 20px;
 }
 
 
 .main_galeria {
-    margin-top: 30px;
     flex-direction: column;
+    height: 1000px;
+    width: 100%;
 }
 
-.foto {
+
+.foto{
     display: grid;
     grid-template-columns: repeat(3, 30vw);
     grid-template-rows: 300px;
     gap: 50px;
 }
 
-.foto img{
+.fotos{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -247,6 +280,7 @@ a {
 .texto_mapa {
     align-items: center;
     font-family: 'Raleway', sans-serif;
+    background-color: rgb(131, 161, 216);
 }
 
 .texto_mapa h3 {
@@ -267,6 +301,12 @@ a {
     align-items: center;
 }
 
+.main_productos h3{
+    background-color: rgb(131, 161, 216);
+}
+
+
+
 
 .imagen_productos {
     width: 60%;
@@ -274,15 +314,42 @@ a {
 }
 
 
-
-.main_galeria h2 {
+.h2 {
     margin-top: 0;
     font-size: 30px;
-    background-color: rgb(215, 221, 226);
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(131, 161, 216);
+}
+
+li{
+    width: 180px; /*lo que mide cada boton del nav*/
+    height: 30px;
 }
 
 
+.fotos{
+height:70%;
+width:90%;
+}
 
+.fotouno{
+height: 40%;
+width: 50%;
+}
+
+
+.fotodos{
+    height: 90%;
+    width: 50%;
+}
+
+
+.fototres{
+    height: 40%;
+    width: 50%;
+}
+
+/*responsive index*/
 @media only screen and (max-width:600px){
 
 .menu{
@@ -297,23 +364,62 @@ align-content: space-around;
 align-items: center;
 }
 
+.header{
+    height:350px;
 }
 
 
-@media only screen and (max-width: 1000px){
+}
+
+
+@media only screen and (min-width: 600px){
+
+.header{
+    height: 200px;
+}
     .main_texto{
         padding: 0;
     }
     .menu{
+
         flex-wrap: wrap;
     }
 }
 
+
+/*responsive galeria*/
+
+@media only screen and (max-width:600px){
+
+.fotos{
+    flex-direction: column;
+
+
+}
+
+}
+
+@media only screen and (min-width:600px){
+
+    .fotos{
+        flex-direction: row;
+    }
+
+}
+
+
+
+
+
+
+
+ 
 /*TRANSFORMACIONES*/
 
 
 /*estilo para cuando apoyo el mouse*/
 /*para cada boton li del nav*/
+
 .inicio:hover{
     background-color: rgb(243, 243, 187);
     transform: scale(1.1,1.1);
@@ -347,7 +453,6 @@ align-items: center;
 
 /*BOOTSTRAP*/
 
-
 .foto1{
 width: 100%;
 height: 100%;
@@ -367,29 +472,33 @@ height: 100%;
 .carouselslide{
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 50%;
     min-height: 600px;
 }
-
 
 
 .header{
     z-index:100; /*para que el header siempre quede arriba y se superponga a todo lo demás*/
 }
 
+.carousel-inner{
 
+    height: 50%;
+    width: 50%;
 
+}
+/*
 .navegador.color{
-
-    background-color: rgb(208, 209, 135);
-    color: bisque;
+    background-color: rgb(171, 204, 161);
+    color: rgb(155, 182, 150);
 }
 
 
 .container-fluid{
-background-color: rgb(201, 175, 143);
 color: bisque;
 }
+*/
+
 
 
 
